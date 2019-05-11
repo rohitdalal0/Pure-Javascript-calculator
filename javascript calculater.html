@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+    <body><p>Simple calculater powerd by Rohit</p>
+        <form name="form">
+            <input type="text" name="output" id="first" style="text-align: right;width:162px;"><br/>
+            <table>
+            <tr>
+                <td colspan="2"><input onclick="document.form.output.value=''" type="button" value="C" style="width:75px;background:rgb(241, 58, 58);color:white;"></td>
+                <td colspan="2"><input onclick="backspace()"  type="button" value="<" style="width:75px;background:rgb(250, 181, 53);" ></td>
+            </tr>
+                
+            <tr>
+                <td><input onclick="insert('+')" type="button" value="+" ></td>
+                <td><input onclick="insert('-')" type="button" value="-" ></td>
+                <td><input onclick="double()" type="button" value="00" ></td>
+                <td><input onclick="insert('.')" type="button" value="." ></td>
+            </tr>
+            <tr>
+                <td><input onclick="insert(1)" type="button" value="1" ></td>
+                <td><input onclick="insert(2)" type="button" value="2" ></td>
+                <td><input onclick="insert(3)" type="button" value="3" ></td>
+                <td><input onclick="insert('*')" type="button" value="*" ></td>
+            </tr>
+            <tr>
+                <td><input onclick="insert(4)" type="button" value="4" ></td>
+                <td><input onclick="insert(5)" type="button" value="5" ></td>
+                <td><input onclick="insert(6)" type="button" value="6" ></td>
+                <td><input onclick="insert('/')" type="button" value="/" ></td>
+            </tr>
+                <td><input onclick="insert(7)" type="button" value="7" ></td>
+                <td><input onclick="insert(8)" type="button" value="8" ></td>
+                <td><input onclick="insert(9)" type="button" value="9" ></td>
+                <td><input onclick="insert('%')" type="button" value="%" ></td>
+            </tr>
+            </tr>
+                <td colspan="2"><input onclick="insert(0)" type="button" value="0" style="width:75px;" ></td>
+                <td colspan="2"><input onclick="result()" type="button" value="=" style="width:75px;background:rgb(66, 197, 54);color:fff;"></td>
+            </tr>
+            </table>
+        </form>
+    </body>
+    <style>
+        #first{
+            border:1px solid rgb(82, 79, 79);
+            margin-bottom: 2px;
+        }
+        form input{
+            border:none;
+            padding:0,0;
+            margin:0;
+            width: 36px;
+            height:30px;
+            border-radius: 3px;
+        }
+        table{
+            background:rgb(82, 79, 79);
+            border-radius: 4px;
+        }
+    
+    </style>
+    <script>
+
+            // function cars(name,model,price,condition){
+            //     this.name=name;
+            //     this.model=model;
+            //     this.price=price;
+            //     this.condition=condition;
+                
+            //     this.mohit=function(){
+            //         document.write("Tesla is one of the super in the cars");
+            //     }
+            //     this.rohit=function()
+            //     {
+            //         document.write("about audi what I can say- is excellent");
+            //     }
+            //     this.good=function(){
+            //         document.write("what the fuck");
+            //     }
+            // }
+            // var mohit= new cars("tesla","WH-108",23000,"excellent");
+            // var rohit= new cars("Audi","A-8",50000,"supperb");
+            // //c1.rohit();
+            //  rohit.good();
+            // document.write("<h1>"+rohit.name+"</h1>");
+            // //c3.mohit();
+            // //document.write("<h1>"+c3.price+"</h1>");
+            function insert(num){
+               document.form.output.value=document.form.output.value+num;
+            }
+            // function clear(){
+            //    document.form.output.value=undefine;
+            // }
+            function result(){
+                document.form.output.value=eval(document.form.output.value);
+            }
+            function backspace(){
+                br=document.form.output.value;
+                document.form.output.value=br.substring(0,br.length-1);
+            }
+            function double(){
+                document.form.output.value+=0;
+                document.form.output.value+=0;
+            }
+    
+            
+    
+    
+    
+    
+        
+        </script>
+</html>
